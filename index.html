@@ -1,78 +1,88 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
     <link href="https://i.imgur.com/LIAtP5s.png" rel="shortcut icon" type="image/x-icon">
-    <meta charset="utf-8"/>
+    <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Fin'easily</title>
     <style>
-        h1, h2 {
+        h1,
+        h2 {
             font-family: "Montserrat";
             margin: 0;
         }
+
         h1 {
-            font-size: 120px;
+            font-size: 60px;
             color: #0491ba;
             text-shadow: 0 0 20px rgba(4, 145, 186, 0.8);
         }
 
         h2 {
-            font-size: 60px;
+            font-size: 30px;
         }
+
         .container {
             display: flex;
             align-items: center;
             justify-content: center;
             flex-direction: column;
             width: 100%;
+            padding: 20px;
         }
+
         .titrePrincipal {
-            flex: 1;
             text-align: center;
-            margin-right: 20px; 
+            margin-bottom: 20px;
         }
+
         #exponential-curve-chart {
-            flex: 1;
             max-width: 100%;
             height: auto;
             width: auto;
         }
+
         body {
             background-color: #343a40;
             color: white;
             margin: 0;
+            padding-top: 70px; /* Adjust for navbar height */
         }
+
         nav.navbar {
             background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(52, 58, 64, 0.8));
         }
 
         p {
             text-align: justify;
-            margin-bottom: 40px;
+            margin-bottom: 20px;
         }
 
         #boutons {
-            margin-bottom: 40px;
+            margin-bottom: 20px;
         }
-
     </style>
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <a class="navbar-brand" href="index.html">
             <img src="https://i.imgur.com/LIAtP5s.png" width="30" height="30" class="d-inline-block align-top" alt="Logo">
             Fin'easily
         </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
+            <ul class="navbar-nav ml-auto">
                 <li class="nav-item active">
                     <a class="nav-link" href="index.html">Accueil<span class="sr-only"></span></a>
                 </li>
@@ -80,18 +90,20 @@
                     <a class="nav-link" href="pages/guide.html">Guides</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Outils
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Outils
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                         <a class="dropdown-item" href="pages/compa.html">Comparateur </a>
-                        <a class="dropdown-item" href="pages/calcInteretsComposes.html">Calculatrice d'intérêts composés</a>
+                        <a class="dropdown-item" href="pages/calcInteretsComposes.html">Calculatrice d'intérêts
+                            composés</a>
                     </div>
                 </li>
             </ul>
         </div>
     </nav>
-    
+
     <div class="container">
         <div class="titrePrincipal">
             <h2>Exploiter son</h2>
@@ -102,43 +114,56 @@
         </div>
     </div>
 
-    <div id="boutons" class="container mt-5">
+    <div id="boutons" class="container mt-3">
         <div class="row">
-            <div class="col">
-                <a href="pages/guide.html" class="btn btn-block" style="background-color: rgba(4, 145, 186, 1); color: white;">Découvrir les guides</a>
+            <div class="col-md-4 mb-3">
+                <a href="pages/guide.html" class="btn btn-block btn-primary">Découvrir les guides</a>
             </div>
-            <div class="col">
-                <a href="pages/compa.html" class="btn btn-block" style="background-color: rgba(4, 145, 186, 1); color: white;">Comparer les banques et enveloppes</a>
+            <div class="col-md-4 mb-3">
+                <a href="pages/compa.html" class="btn btn-block btn-primary">Comparer les banques et enveloppes</a>
             </div>
-            <div class="col">
-                <a href="pages/calcInteretsComposes.html" class="btn btn-block" style="background-color: rgba(4, 145, 186, 1); color: white;">La puissance des intérêts composés</a>
+            <div class="col-md-4">
+                <a href="pages/calcInteretsComposes.html" class="btn btn-block btn-primary">La puissance des
+                    intérêts composés</a>
             </div>
         </div>
     </div>
 
-    <div id="presentation" class="container mt-5">
+    <div id="presentation" class="container mt-3">
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <h2 class="text-center mb-4">Qui sommes nous ?</h2>
-                <p>Nous sommes 3 étudiants de Saint-Etienne School of Economics et une étudiante de Roma Tre, passionnés par les enjeux financiers.
-                Nous sommes ravis de vous présenter l'aboutissement de notre travail qui nous a été démandé dans le cadre de notre cour de Gestion de Projet.</p>
+                <p>Nous sommes 3 étudiants de Saint-Etienne School of Economics et une étudiante de Roma Tre,
+                    passionnés par les enjeux financiers.
+                    Nous sommes ravis de vous présenter l'aboutissement de notre travail qui nous a été démandé dans
+                    le cadre de notre cour de Gestion de Projet.</p>
                 <h2 class="text-center mb-4">Pourquoi ce site ?</h2>
-                <p>Un constat alarmant est à faire, les jeunes n’ont pas d’éducation financière ou en ont une trop limitée. 
-                C’est pour palier à ce manque de connaissances que nous avons eu l’idée de ce site qui permet de répertorier, 
-                ce qui nous semble, les bases d’une éducation financière. 
-                De quoi permettre de faire fructifier votre épargne pour appréhender plus sereinement l’avenir dans ces temps incertains.</p>
+                <p>Un constat alarmant est à faire, les jeunes n’ont pas d’éducation financière ou en ont une trop
+                    limitée.
+                    C’est pour palier à ce manque de connaissances que nous avons eu l’idée de ce site qui permet de
+                    répertorier,
+                    ce qui nous semble, les bases d’une éducation financière.
+                    De quoi permettre de faire fructifier votre épargne pour appréhender plus sereinement l’avenir dans
+                    ces temps incertains.</p>
                 <h2 class="text-center mb-4">Mise en garde</h2>
-                <p>Comme nous l’avons précisé nous sommes des étudiants et nous ne prodiguons aucun conseil. 
-                    Nous sommes juste ici pour répertorier des éléments généraux importants pour se construire des bases en éducation financière. 
+                <p>Comme nous l’avons précisé nous sommes des étudiants et nous ne prodiguons aucun conseil.
+                    Nous sommes juste ici pour répertorier des éléments généraux importants pour se construire des
+                    bases en éducation financière.
                     Nous ne sommes, en aucun cas, responsables d’une perte partielle ou total d’un capital investi.</p>
             </div>
         </div>
-    </div>   
+    </div>
 
-    
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> 
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
@@ -188,4 +213,5 @@
         });
     </script>
 </body>
+
 </html>
